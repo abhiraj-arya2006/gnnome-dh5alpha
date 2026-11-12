@@ -1,0 +1,2 @@
+assembly	source	type	ref_left	ref_right	contig_left	contig_right	ref_jump	contig_gap	discrepancy	identity
+R1_Raven_p0	nucmer	local	591852	592167	590218	590140	315	-78	393	0.9982/0.9982

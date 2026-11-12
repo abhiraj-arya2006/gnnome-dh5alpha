@@ -1,0 +1,4 @@
+cmd: python create_inference_graphs.py --reads /home/abhiraj_arya/research/run2_corrected/00_reads/simulated_reads.fastq.gz --gfa /home/abhiraj_arya/research/run2_corrected/02_raven_p0/graph_1.gfa --asm raven --out /home/abhiraj_arya/research/run2_corrected/04_gnnome
+exit=0
+cmd: python inference.py --data /home/abhiraj_arya/research/run2_corrected/04_gnnome --asm raven --out /home/abhiraj_arya/research/run2_corrected/04_gnnome/raven --model weights/weights.pt
+exit=0

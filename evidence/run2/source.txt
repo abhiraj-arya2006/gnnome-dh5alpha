@@ -1,0 +1,20 @@
+commit 3207c8d9819174cd28d0a250a9c9a3156811e890
+date 2022-05-03 14:32:43 +0800
+msg Print graphs in CSV and GFA
+https://github.com/lbcb-sci/raven.git
+uncommitted changes:
+void Assemble(std::shared_ptr<thread_pool::ThreadPool> threadPool, Graph& graph,
+              bool checkpoints) {
+  if (graph.stage < -3 || graph.stage > -1) {
+    return;
+  }
+
+  biosoup::Timer timer;
+  timer.Start();
+
+  PrintCsv(graph, "graph_1.csv", false, false, true);
+  PrintGfa(graph, "graph_1.gfa");
+
+CMAKE_BUILD_TYPE:STRING=Release
+racon_enable_cuda:BOOL=OFF
+sources newer than binary:

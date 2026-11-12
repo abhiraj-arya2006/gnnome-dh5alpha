@@ -1,0 +1,23 @@
+A. GNNome breakpoints of junction origin: the walk edge at the junction
+   ref   570153: S1_8523->S1_4094 TWIN (reused overlap)  true cut error  -197 bp  QUAST/aligner discrepancy  201 bp  junction distance 53 bp
+   ref   613441: S1_11423->S1_7750 TWIN (reused overlap)  true cut error  -284 bp  QUAST/aligner discrepancy  276 bp  junction distance 58 bp
+   ref   956768: S1_12945->S1_8206 TWIN (reused overlap)  true cut error  -244 bp  QUAST/aligner discrepancy  229 bp  junction distance 44 bp
+   ref  1379184: S1_8364->S1_11533 TWIN (reused overlap)  true cut error   n/a bp  QUAST/aligner discrepancy  218 bp  junction distance 36 bp
+   ref  1418609: S1_10563->S1_5316 TWIN (reused overlap)  true cut error   306 bp  QUAST/aligner discrepancy  296 bp  junction distance 45 bp
+   ref  1466330: S1_5028->S1_11573 TWIN (reused overlap)  true cut error   237 bp  QUAST/aligner discrepancy  239 bp  junction distance 264 bp
+   ref  1858581: S1_1178->S1_3907 TWIN (reused overlap)  true cut error   220 bp  QUAST/aligner discrepancy  213 bp  junction distance 30 bp
+   ref  2146145: S1_94->S1_13355 TWIN (reused overlap)  true cut error   267 bp  QUAST/aligner discrepancy  265 bp  junction distance 0 bp
+   ref  2376346: S1_346->S1_1106 TWIN (reused overlap)  true cut error  -342 bp  QUAST/aligner discrepancy  336 bp  junction distance 103 bp
+   ref  2380126: S1_1106->S1_11291 TWIN (reused overlap)  true cut error   317 bp  QUAST/aligner discrepancy  309 bp  junction distance 0 bp
+   ref  2546661: S1_2734->S1_13261 TWIN (reused overlap)  true cut error   203 bp  QUAST/aligner discrepancy  202 bp  junction distance 66 bp
+   ref  2763743: S1_4230->S1_8724 TWIN (reused overlap)  true cut error   270 bp  QUAST/aligner discrepancy  271 bp  junction distance 18 bp
+   ref  3040530: S1_722->S1_2275 TWIN (reused overlap)  true cut error   213 bp  QUAST/aligner discrepancy  207 bp  junction distance 81 bp
+   ref  3112441: S1_12983->S1_11228 TWIN (reused overlap)  true cut error  -255 bp  QUAST/aligner discrepancy  256 bp  junction distance -1 bp
+   ref  3765745: S1_6165->S1_1200 TWIN (reused overlap)  true cut error   249 bp  QUAST/aligner discrepancy  239 bp  junction distance 51 bp
+   -> 15/15 junction-origin GNNome breakpoints sit on twin edges
+B. Breakpoints shared by GNNome and Raven (within 2 kb) and their source reads
+   ref    78009: GNNome origin=inherited src=['S1_9409']                    | Raven origin=inherited src=['S1_9409']
+   ref    81931: GNNome origin=inherited src=['S1_9409']                    | Raven origin=inherited src=['S1_9409']
+   ref  2736537: GNNome origin=inherited src=['S1_2717']                    | Raven origin=inherited src=['S1_2717']
+   ref  3126793: GNNome origin=inherited src=['S1_11228']                   | Raven origin=inherited src=['S1_11228']
+   ref  3153081: GNNome origin=inherited src=['S1_11228']                   | Raven origin=inherited src=['S1_11228']

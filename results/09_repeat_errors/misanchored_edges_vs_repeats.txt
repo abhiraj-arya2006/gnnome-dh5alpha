@@ -1,0 +1,4 @@
+run1: written true edges with |cut error|>=50 bp: 18; dst read starts in repeat/tRNA/rRNA/IS/Rhs: 17/18  vs other written edges 1197/37324 (3.21%)  Fisher OR=513.1 p=7.92e-25
+run2: written true edges with |cut error|>=50 bp: 13; dst read starts in repeat/tRNA/rRNA/IS/Rhs: 4/13  vs other written edges 95/2924 (3.25%)  Fisher OR=13.2 p=6.87e-04
+run1: mis-anchored written edges (|cut err|>=50): 18;  used by GNNome walk: 0 [];  used by Raven layout: 1 [('S1_7704', 'S1_3959', -391)]
+run2: mis-anchored written edges (|cut err|>=50): 13;  used by GNNome walk: 0 [];  used by Raven layout: 1 [('S1_13007', 'S1_5289', 215)]

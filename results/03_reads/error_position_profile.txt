@@ -1,0 +1,18 @@
+Run1 (first 4000 reads) error events per base by distance from read end (FASTQ orientation)
+          0-100  from 5-prime: 0.00190   from 3-prime: 0.00171
+        100-250  from 5-prime: 0.00172   from 3-prime: 0.00179
+        250-500  from 5-prime: 0.00171   from 3-prime: 0.00161
+       500-1000  from 5-prime: 0.00159   from 3-prime: 0.00158
+      1000-2000  from 5-prime: 0.00158   from 3-prime: 0.00152
+      2000-5000  from 5-prime: 0.00152   from 3-prime: 0.00150
+     5000-10000  from 5-prime: 0.00145   from 3-prime: 0.00143
+      10000-end  from 5-prime: 0.00153   from 3-prime: 0.00157
+Run2 (first 4000 reads) error events per base by distance from read end (FASTQ orientation)
+          0-100  from 5-prime: 0.18696   from 3-prime: 0.14753
+        100-250  from 5-prime: 0.15502   from 3-prime: 0.14798
+        250-500  from 5-prime: 0.15040   from 3-prime: 0.14754
+       500-1000  from 5-prime: 0.14780   from 3-prime: 0.14707
+      1000-2000  from 5-prime: 0.14751   from 3-prime: 0.14668
+      2000-5000  from 5-prime: 0.14703   from 3-prime: 0.14772
+     5000-10000  from 5-prime: 0.14760   from 3-prime: 0.14831
+      10000-end  from 5-prime: 0.14760   from 3-prime: 0.14903

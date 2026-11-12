@@ -1,0 +1,46 @@
+78:conda install -c bioconda -c conda-forge raven-assembler=1.8.1 -y
+79:raven --version
+80:python create_inference_graphs.py --reads example/ecoli.fasta.gz --gfa example/hifiasm/output/ecoli_asm.bp.raw.r_utg.gfa --asm hifiasm --out example
+83:python create_inference_graphs.py --reads example/ecoli.fasta.gz --gfa example/hifiasm/output/ecoli_asm.bp.raw.r_utg.gfa --asm hifiasm --out example
+84:python inference.py --data example --asm hifiasm --out example/hifiasm
+159:mkdir -p data/dh5alpha/raven/output
+160:raven --graphical-fragment-assembly data/dh5alpha/raven/output/dh5alpha_asm.gfa -t6 data/dh5alpha/simulated_reads.fastq.gz > data/dh5alpha/raven/output/dh5alpha_asm.fasta
+161:ls data/dh5alpha/raven/output/
+162:python create_inference_graphs.py --reads data/dh5alpha/simulated_reads.fastq.gz --gfa data/dh5alpha/raven/output/dh5alpha_asm.gfa --asm raven --out data/dh5alpha
+163:python create_inference_graphs.py --reads data/dh5alpha/simulated_reads.fastq.gz --gfa graph_1.gfa --asm raven --out data/dh5alpha
+164:python inference.py --data data/dh5alpha --asm raven --out data/dh5alpha/raven
+165:ls data/dh5alpha/raven/assembly/
+166:seqkit stats data/dh5alpha/raven/assembly/0_assembly.fasta
+168:minimap2 -x asm5 data/dh5alpha/CP017100.fasta data/dh5alpha/raven/assembly/0_assembly.fasta > data/dh5alpha/raven_vs_ref.paf
+169:cat data/dh5alpha/raven_vs_ref.paf
+171:quast.py data/dh5alpha/raven/assembly/0_assembly.fasta -r data/dh5alpha/CP017100.fasta -o data/dh5alpha/quast_gnnome_raven
+210:grep -nEi 'create_inference_graphs|inference.py|dh5alpha|CP017100|graph_1.gfa' ~/.bash_history | tail -100
+221:sha256sum graph_1.gfa data/graph_1.gfa data/dh5alpha/graph_1.gfa data/dh5alpha/raven/output/dh5alpha_asm.gfa
+228:sha256sum graph_1.gfa data/graph_1.gfa data/dh5alpha/graph_1.gfa data/dh5alpha/raven/output/dh5alpha_asm.gfa
+237:ls -lh data/dh5alpha/raven/output/dh5alpha_asm.gfa
+238:head -20 data/dh5alpha/raven/output/dh5alpha_asm.gfa
+242:for f in data/graph_1.gfa data/dh5alpha/raven/output/dh5alpha_asm.gfa; do     echo "========== $f ==========";     echo "Record counts:";     awk -F '\t' '{count[substr($1,1,1)]++} END {
+245:for f in data/graph_1.gfa data/dh5alpha/raven/output/dh5alpha_asm.gfa; do     echo "========== $f ==========";     echo "Record counts:";     awk -F '\t' '{count[substr($1,1,1)]++} END {
+253:    "data/dh5alpha/raven/output/dh5alpha_asm.gfa",
+298:cp -a data/dh5alpha/raven       data/dh5alpha_original_backup/
+304:cp -a data/dh5alpha/raven       data/dh5alpha_original_backup/
+307:sha256sum data/dh5alpha_original_backup/CP017100.fasta data/dh5alpha_original_backup/simulated_reads.fastq.gz data/dh5alpha_original_backup/raven/output/dh5alpha_asm.gfa
+324:RAVEN="./vendor/raven-1.8.1/build/bin/raven"
+327:RAVEN="./vendor/raven-1.8.1/build/bin/raven"
+332:mkdir -p data/dh5alpha_corrected/raven_graph
+334:cd data/dh5alpha_corrected/raven_graph
+335:../../../../vendor/raven-1.8.1/build/bin/raven     -t 6 -p0     ../../dh5alpha/simulated_reads.fastq.gz     > assembly.fasta 2> raven.log
+337:if [ $? -ne 0 ] || [ ! -s graph_1.gfa ] || [ ! -s assembly.fasta ]; then     echo "ERROR: Raven graph generation failed";     tail -50 raven.log;     exit 1; fi
+339:RAVEN="./vendor/raven-1.8.1/build/bin/raven"
+343:mkdir -p data/dh5alpha_corrected/raven_graph
+344:cd data/dh5alpha_corrected/raven_graph
+345:../../../../vendor/raven-1.8.1/build/bin/raven     -t 6 -p0     ../../dh5alpha/simulated_reads.fastq.gz     > assembly.fasta 2> raven.log
+346:if [ $? -ne 0 ] || [ ! -s graph_1.gfa ] || [ ! -s assembly.fasta ]; then     echo "ERROR: Raven graph generation failed";     tail -50 raven.log;     exit 1; fi
+348:RAVEN="./vendor/raven-1.8.1/build/bin/raven"
+351:cd data/dh5alpha_corrected/raven_graph
+352:../../../../vendor/raven-1.8.1/build/bin/raven     -t 6 -p0     ../../dh5alpha/simulated_reads.fastq.gz     > assembly.fasta 2> raven.log
+355:cd data/dh5alpha_corrected/raven_graph
+356:../../../../vendor/raven-1.8.1/build/bin/raven     -t 6 -p0     ../../dh5alpha/simulated_reads.fastq.gz     > assembly.fasta 2> raven.log
+357:OUT="$PWD/data/dh5alpha_corrected/raven_graph_run2"
+364:"$RAVEN" -t 6 -p0 "$READS"     > assembly.fasta 2> raven.log
+367:if [ "$STATUS" -ne 0 ]; then     echo "RAVEN FAILED";     tail -60 raven.log;     exit 1; fi

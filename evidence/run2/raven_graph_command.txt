@@ -1,0 +1,32 @@
+Raven graph-output build: /home/abhiraj_arya/research/GNNome/vendor/raven-1.8.1/build/bin/raven
+  sha256 2ba8260b04c6f19ec77da5e33d1b2cf6e63f0ff76e162bdbc20a7f6cc3f3cbdd
+  source commit 3207c8d9819174cd28d0a250a9c9a3156811e890 (2022-05-03 14:32:43 +0800) Print graphs in CSV and GFA
+  remote https://github.com/lbcb-sci/raven.git; uncommitted changes: 0
+  graph hook RavenLib/src/assemble.cc:
+       PrintCsv(graph, "graph_1.csv", false, false, true);
+       PrintGfa(graph, "graph_1.gfa");
+  -> no command-line flag: graph_1.gfa and graph_1.csv are always written to the current working directory at the start of Assemble()
+
+Exact Run 2 graph-producing command (from 02_raven_p0/command.txt):
+  cd /home/abhiraj_arya/research/run2_corrected/02_raven_p0 && /usr/bin/time -v /home/abhiraj_arya/research/GNNome/vendor/raven-1.8.1/build/bin/raven -t 4 -p0 /home/abhiraj_arya/research/run2_corrected/00_reads/simulated_reads.fastq.gz > raven_p0_assembly.fasta 2> raven.log
+  date_utc: Thu Nov 12 18:01:13 UTC 2026
+  cwd: /home/abhiraj_arya/research/run2_corrected/02_raven_p0
+  binary: /home/abhiraj_arya/research/GNNome/vendor/raven-1.8.1/build/bin/raven
+  binary_sha256: 2ba8260b04c6f19ec77da5e33d1b2cf6e63f0ff76e162bdbc20a7f6cc3f3cbdd
+  reads_sha256: f5f25cc4da2201e12d4dc74024c468fe5b9b6c49447e16d9193251807815e38e
+  command: /home/abhiraj_arya/research/GNNome/vendor/raven-1.8.1/build/bin/raven -t 4 -p0 /home/abhiraj_arya/research/run2_corrected/00_reads/simulated_reads.fastq.gz
+  exit=0
+
+Output files:
+  2026-11-12 18:01:42.319425661 +0000  19568228 B  /home/abhiraj_arya/research/run2_corrected/02_raven_p0/graph_1.gfa
+  2026-11-12 18:01:42.283425713 +0000  517652 B  /home/abhiraj_arya/research/run2_corrected/02_raven_p0/graph_1.csv
+  2026-11-12 18:01:42.719425076 +0000  4685138 B  /home/abhiraj_arya/research/run2_corrected/02_raven_p0/raven_p0_assembly.fasta
+  graph_1.gfa sha256 6d5df9820ffddae793538c091eb8ac98013a890ab8ed1bd402b454ed4c8a5483  S=762 L=2968
+
+First lines of raven.log:
+  [raven::] loaded 14874 sequences 1.373839s
+  [raven::Graph::Construct] minimized 0 - 14874 / 14874 1.581277s
+  [raven::Graph::Construct] mapped sequences 1.729438s
+  [raven::Graph::Construct] annotated piles 0.041033s
+  [raven::Graph::Construct] removed contained sequences 0.016294s
+  [raven::Graph::Construct] removed chimeric sequences 0.007361s

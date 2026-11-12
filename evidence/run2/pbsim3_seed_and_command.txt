@@ -1,0 +1,10 @@
+PBSIM3 binary: /home/abhiraj_arya/research/GNNome/vendor/pbsim3/src/pbsim  sha256=5ce6a5e9446528e19a0cdab397b0832369a32030bbb8050d2fe24214196c79d5
+PBSIM3 source commit: 35ce0debb8b9df8a45ac9bb85420686776e9e721 2025-04-22 09:48:30 +0900
+Search window: 1783636236..1783636477 (2026-07-09 22:30:36..22:34:37 UTC)
+MATCH seed=1783636376 (Thu Jul  9 22:32:56 UTC 2026)
+Recovered command:
+./vendor/pbsim3/src/pbsim --strategy wgs --method qshmm --qshmm ./vendor/pbsim3/data/QSHMM-RSII.model --depth 30 --genome data/dh5alpha/CP017100.fasta --prefix data/dh5alpha/simulated --seed 1783636376
+Full regeneration (content SHA256, regenerated vs original):
+  simulated_0001.fq.gz  regen=5a6ba8d273b356fa8f3bfb9f2406c993199c1f85dd2a5a94b08f5360826b69dc  orig=5a6ba8d273b356fa8f3bfb9f2406c993199c1f85dd2a5a94b08f5360826b69dc
+  simulated_0001.maf.gz  regen=48653c618cecda08bf060c8fd4045fcde40b2e45cada0761bb0e2fae8ff0e437  orig=48653c618cecda08bf060c8fd4045fcde40b2e45cada0761bb0e2fae8ff0e437
+  simulated_0001.ref    byte-identical

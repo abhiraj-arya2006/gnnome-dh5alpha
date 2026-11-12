@@ -1,0 +1,2 @@
+data/graph_1.gfa segments found in GNNome 0_reads.pkl: 2897 / 2897
+graph_1.gfa segments found in GNNome 0_reads.pkl: 0 / 2561

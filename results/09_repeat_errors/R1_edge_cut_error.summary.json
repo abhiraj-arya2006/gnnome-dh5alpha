@@ -1,0 +1,94 @@
+{
+ "true_edges": 74684,
+ "all_true_edges": {
+  "n": 74684,
+  "abs_err_median": 0.0,
+  "abs_err_mean": 2.6297332762037384,
+  "frac_abs_gt5": 0.15197364897434523,
+  "prefix_median": 10445.0
+ },
+ "nearest_neighbour_edges": {
+  "n": 5791,
+  "abs_err_median": 0.0,
+  "abs_err_mean": 4.193576238991539,
+  "frac_abs_gt5": 0.23691935762389915,
+  "prefix_median": 1224.0
+ },
+ "gnnome_walk_edges": {
+  "n": 393,
+  "abs_err_median": 0.0,
+  "abs_err_mean": 1.8091603053435115,
+  "frac_abs_gt5": 0.0916030534351145,
+  "prefix_median": 11641.0
+ },
+ "by_prefix_length": [
+  {
+   "prefix_bin": "0-1000",
+   "n": 3134,
+   "abs_err_median": 0.0,
+   "abs_err_mean": 4.10178685386088,
+   "frac_abs_gt5": 0.23452456924058712,
+   "prefix_median": 504.0
+  },
+  {
+   "prefix_bin": "1000-2000",
+   "n": 3385,
+   "abs_err_median": 0.0,
+   "abs_err_mean": 4.128803545051698,
+   "frac_abs_gt5": 0.2363367799113737,
+   "prefix_median": 1519.0
+  },
+  {
+   "prefix_bin": "2000-4000",
+   "n": 7164,
+   "abs_err_median": 0.0,
+   "abs_err_mean": 3.7992741485203796,
+   "frac_abs_gt5": 0.22305974316024568,
+   "prefix_median": 3011.5
+  },
+  {
+   "prefix_bin": "4000-6000",
+   "n": 7526,
+   "abs_err_median": 0.0,
+   "abs_err_mean": 3.5843741695455753,
+   "frac_abs_gt5": 0.21857560457082115,
+   "prefix_median": 5000.0
+  },
+  {
+   "prefix_bin": "6000-8000",
+   "n": 7294,
+   "abs_err_median": 0.0,
+   "abs_err_mean": 3.27447216890595,
+   "frac_abs_gt5": 0.20249520153550865,
+   "prefix_median": 7004.0
+  },
+  {
+   "prefix_bin": "8000-10000",
+   "n": 7185,
+   "abs_err_median": 0.0,
+   "abs_err_mean": 2.936116910229645,
+   "frac_abs_gt5": 0.17731384829505914,
+   "prefix_median": 9005.0
+  },
+  {
+   "prefix_bin": "10000-15000",
+   "n": 18285,
+   "abs_err_median": 0.0,
+   "abs_err_mean": 2.3401148482362593,
+   "frac_abs_gt5": 0.14405250205086137,
+   "prefix_median": 12476.0
+  },
+  {
+   "prefix_bin": "15000-40000",
+   "n": 20708,
+   "abs_err_median": 0.0,
+   "abs_err_mean": 1.3305968707745799,
+   "frac_abs_gt5": 0.05717597063936643,
+   "prefix_median": 17903.0
+  }
+ ],
+ "spearman_abs_err_vs_prefix": {
+  "rho": -0.13029694244199347,
+  "p": 4.629877124631472e-280
+ }
+}

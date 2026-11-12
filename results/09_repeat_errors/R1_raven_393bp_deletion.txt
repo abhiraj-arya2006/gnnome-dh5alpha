@@ -1,0 +1,9 @@
+self-alignment of ref 590800-593200 (excluding diagonal):
+   query 591652-591941  matches target 591652-592050  strand +  identity 0.726  len 398
+   query 591652-592050  matches target 591652-591941  strand +  identity 0.726  len 398
+   element 591652 591727 tRNA tRNA-Gln
+   element 591774 591851 tRNA tRNA-Met
+   element 591866 591941 tRNA tRNA-Gln
+   element 591975 592050 tRNA tRNA-Gln
+   element 592073 592158 tRNA tRNA-Leu
+   element 592167 592244 tRNA tRNA-Met

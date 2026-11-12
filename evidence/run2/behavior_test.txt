@@ -1,0 +1,15 @@
+/home/abhiraj_arya/research/run2_corrected/01_raven_build/behavior_test/conda:
+total 776
+drwxr-xr-x 2 abhiraj_arya abhiraj_arya   4096 Nov 12 18:01 .
+drwxr-xr-x 4 abhiraj_arya abhiraj_arya   4096 Nov 12 18:00 ..
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya 781307 Nov 12 18:01 asm.fa
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya    940 Nov 12 18:01 log
+
+/home/abhiraj_arya/research/run2_corrected/01_raven_build/behavior_test/fork:
+total 6344
+drwxr-xr-x 2 abhiraj_arya abhiraj_arya    4096 Nov 12 18:01 .
+drwxr-xr-x 4 abhiraj_arya abhiraj_arya    4096 Nov 12 18:00 ..
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya  781307 Nov 12 18:01 asm.fa
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya  151434 Nov 12 18:01 graph_1.csv
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya 5548455 Nov 12 18:01 graph_1.gfa
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya     940 Nov 12 18:01 log

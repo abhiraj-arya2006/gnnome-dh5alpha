@@ -1,0 +1,16 @@
+  indel_le5  repeat                  11124/347507    3.20% vs genome  3.17%  fold 1.01  p=0.2907
+  indel_le5  homopolymer               658/347507    0.19% vs genome  0.25%  fold 0.76  p=1.0000
+  indel_le5  repeat_rRNA              2690/347507    0.77% vs genome  0.85%  fold 0.91  p=0.9870
+  indel_le5  repeat_IS_transposase    4433/347507    1.28% vs genome  1.23%  fold 1.04  p=0.0609
+  mismatch   repeat                   3478/106573    3.26% vs genome  3.17%  fold 1.03  p=0.2328
+  mismatch   homopolymer               253/106573    0.24% vs genome  0.25%  fold 0.96  p=0.7303
+  mismatch   repeat_rRNA               837/106573    0.79% vs genome  0.85%  fold 0.93  p=0.8402
+  mismatch   repeat_IS_transposase    1458/106573    1.37% vs genome  1.23%  fold 1.11  p=0.0220
+  indel_gt5  repeat                     10/378       2.65% vs genome  3.17%  fold 0.83  p=0.7582
+  indel_gt5  homopolymer                 0/378       0.00% vs genome  0.25%  fold 0.00  p=1.0000
+  indel_gt5  repeat_rRNA                 4/378       1.06% vs genome  0.85%  fold 1.25  p=0.3786
+  indel_gt5  repeat_IS_transposase       3/378       0.79% vs genome  1.23%  fold 0.65  p=0.8412
+  breakpoint repeat                      2/22        9.09% vs genome  3.17%  fold 2.87  p=0.1738
+  breakpoint homopolymer                 0/22        0.00% vs genome  0.25%  fold 0.00  p=1.0000
+  breakpoint repeat_rRNA                 0/22        0.00% vs genome  0.85%  fold 0.00  p=1.0000
+  breakpoint repeat_IS_transposase       1/22        4.55% vs genome  1.23%  fold 3.70  p=0.2418

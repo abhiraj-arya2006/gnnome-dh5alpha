@@ -1,0 +1,6 @@
+MAF alignments=14874 columns=145437443 read_identity=86.01%
+simulation ref header: >CP017100.1 Escherichia coli strain K-12 NEB 5-alpha chromosome, complete genome
+PBSIM command: NOT LOGGED in ~/.bash_history
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya 118374982 2026-07-09 22:33:42.592258225 +0000 /home/abhiraj_arya/research/GNNome/data/dh5alpha/simulated_0001.fq.gz
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya  92175168 2026-07-09 22:33:42.604258499 +0000 /home/abhiraj_arya/research/GNNome/data/dh5alpha/simulated_0001.maf.gz
+-rw-r--r-- 1 abhiraj_arya abhiraj_arya   4649200 2026-07-09 22:32:56.891217707 +0000 /home/abhiraj_arya/research/GNNome/data/dh5alpha/simulated_0001.ref

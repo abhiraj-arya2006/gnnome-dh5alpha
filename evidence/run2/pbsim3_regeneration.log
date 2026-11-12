@@ -1,0 +1,41 @@
+:::: Simulation parameters :::
+
+strategy : wgs
+method : qshmm
+qshmm : ./vendor/pbsim3/data/QSHMM-RSII.model
+genome : data/dh5alpha/CP017100.fasta
+prefix : /tmp/claude-1000/-home-abhiraj-arya-research/ab7b1525-2d80-4fa3-90fe-b244e7093221/scratchpad/pbsim/full/simulated
+id-prefix : S
+depth : 30.000000
+length-mean : 9000.000000
+length-sd : 7000.000000
+length-min : 100
+length-max : 1000000
+difference-ratio : 6:55:39
+seed : 1783636376
+accuracy-mean : 0.850000
+pass_num : 1
+hp-del-bias : 1.000000
+
+:::: Reference stats ::::
+
+file name : data/dh5alpha/CP017100.fasta
+
+ref.1 (len:4583637) : CP017100.1 Escherichia coli strain K-12 NEB 5-alpha chromosome, complete genome
+
+:::: Simulation stats (ref.1) ::::
+
+read num. : 14874
+depth : 30.000070
+read length mean (SD) : 9244.952938 (7082.132053)
+read length min : 109
+read length max : 72272
+read accuracy mean (SD) : 0.851345 (0.041603)
+substitution rate. : 0.008888
+insertion rate. : 0.081424
+deletion rate. : 0.057654
+
+:::: System utilization ::::
+
+CPU time(s) : 4
+Elapsed time(s) : 48

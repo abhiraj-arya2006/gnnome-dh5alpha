@@ -1,0 +1,4 @@
+file                                  format  type  num_seqs    sum_len    min_len    avg_len    max_len         Q1         Q2         Q3  sum_gap        N50  N50_num  Q20(%)  Q30(%)  AvgQual  GC(%)  sum_n
+data/raven/assembly/0_assembly.fasta  FASTA   DNA          1  4,581,340  4,581,340  4,581,340  4,581,340  4,581,340  4,581,340  4,581,340        0  4,581,340        1       0       0        0  50.77      0
+data/CP017100_assembly.fasta          FASTA   DNA          1  4,581,274  4,581,274  4,581,274  4,581,274  4,581,274  4,581,274  4,581,274        0  4,581,274        1       0       0        0  50.77      0
+data/CP017100.fasta                   FASTA   DNA          1  4,583,637  4,583,637  4,583,637  4,583,637  4,583,637  4,583,637  4,583,637        0  4,583,637        1       0       0        0  50.77      0

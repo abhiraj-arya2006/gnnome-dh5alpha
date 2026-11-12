@@ -1,0 +1,1 @@
+reads=14884 bases=275035078 coverage=60.00x

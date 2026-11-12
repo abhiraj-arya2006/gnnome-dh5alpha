@@ -1,0 +1,19 @@
+factor	run1	run2	evidence
+Reads file	GNNome/data/CP017100_sim.fastq (SHA256 5d3b823e…ac00)	GNNome/data/dh5alpha/simulated_reads.fastq.gz (SHA256 f5f25cc4…e38e; content 5a6ba8d2…69dc)	run1_evidence/hashes, run2_corrected/00_reads
+Simulator build	PBSIM3, build NOT the one on disk (see evidence)	PBSIM3 on disk, commit 35ce0de (binary 5ce6a5e9…)	run2_corrected/08_proofs/pbsim3_seed_and_command.txt
+Evidence Run 1 used a different PBSIM3 build	MAF ref-start shifted for 5,224/7,442 '-' strand reads (1–56 bp); 99.84 % identity exceeds this build's ~96 % cap (QSHMM-RSII and ERRHMM tested); 18.5±2.2 kb lengths not producible at the expected seed (331 valid settings tried)	MAF has 0 shifted blocks; full regeneration byte-identical	analysis/03_reads/run1.summary.json; this table
+Simulator command	not recovered	pbsim --strategy wgs --method qshmm --qshmm QSHMM-RSII.model --depth 30 --genome data/dh5alpha/CP017100.fasta --seed 1783636376	run2_corrected/08_proofs
+Error model (difference ratio sub:ins:del)	6.0:54.9:39.0 (= PBSIM default 6:55:39)	6.0:55.0:39.0 (= default)	03_reads/*.summary.json
+Read identity (aggregate, MAF)	99.84 %	86.01 %	03_reads
+Per-read identity median [p05–p95]	99.93 [99.36–99.99] %	87.10 [77.41–89.39] %	03_reads
+Mean base quality (FASTQ)	Q80.3	Q10.0	03_reads
+Reads / bases / coverage	14,884 / 275,035,078 / 60.00×	14,874 / 137,509,430 / 30.00×	03_reads
+Read length mean ± SD; N50	18,479 ± 2,163; 18,540	9,245 ± 7,082; 12,942	03_reads
+True depth: bases <10× / at 0×	6,641 / 363 (linear-genome ends)	11,075 / 233	03_reads
+Assembler (graph)	Raven fork 3207c8d, binary 2ba8260b…, -p0, -t 8 (documented, not logged)	same binary, -p0, -t 4 (logged)	run1_evidence, run2_corrected/02_raven_p0
+Graph S / L / edges per node	2,897 / 37,364 / 12.9	762 / 2,968 / 3.9	05_edge_predictions
+GNNome	pretrained weights.pt 240076f0…, no training	same	run2_corrected/08_proofs
+Polishing (original)	none	external minimap2+Racon×2 (both) and Raven -p 2	run2_corrected/07_polish
+Polishing (added in this analysis)	external minimap2+Racon×2 (both), identical protocol	—	analysis/10_polishing/run1
+QUAST	5.3.0, default, 3 threads	5.3.0, default (unpolished also --min-identity 80), 1 thread; thread count shown not to change metrics	run2_corrected/08_proofs/quast_settings_proof.txt
+Host	LOQ (12 logical CPUs, 16 GB) per audit	WSL2, 4 CPUs, 11 GB	conference_paper_report.md; this session

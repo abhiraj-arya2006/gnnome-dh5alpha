@@ -1,0 +1,81 @@
+{
+ "complexity": {
+  "gfa": "run2_corrected/02_raven_p0/graph_1.gfa",
+  "segments": 762,
+  "links": 2968,
+  "nodes": 1524,
+  "edges": 5936,
+  "edges_per_node": 3.89501312335958,
+  "out_degree_mean": 3.89501312335958,
+  "out_degree_max": 10,
+  "frac_nodes_outdeg_gt1": 0.9520997375328084,
+  "frac_nodes_outdeg_gt3": 0.5807086614173228,
+  "nodes_outdeg0": 2,
+  "nodes_indeg0": 2,
+  "weak_components": 2,
+  "largest_component": 762,
+  "isolated_nodes": 0,
+  "transitive_edges": 4406,
+  "frac_transitive": 0.7422506738544474,
+  "cyclomatic_number": 4414,
+  "overlap_len_median": 12009.0,
+  "overlap_len_mean": 12293.208557951482,
+  "overlap_len_min": 142,
+  "segment_len_median": 24400.0
+ },
+ "outdeg_hist": {
+  "0": 2,
+  "1": 71,
+  "2": 200,
+  "3": 366,
+  "4": 378,
+  "5": 279,
+  "6": 161,
+  "7": 50,
+  "8": 11,
+  "9": 4,
+  "10": 2
+ },
+ "truth": {
+  "tolerance_bp": 0,
+  "edges_true": 5874,
+  "edges_spurious": 4,
+  "edges_containment": 58,
+  "frac_spurious": 0.0006738544474393531,
+  "edge_classes": {
+   "true": 5874,
+   "containment_src_in_dst": 29,
+   "containment_dst_in_src": 29,
+   "no_genomic_overlap": 4
+  },
+  "nodes_with_spurious_out_edge": 3,
+  "auroc_true_vs_spurious": 0.897301668369084,
+  "ap_true_vs_spurious": 0.9999252908883053,
+  "ap_spurious_class": 0.0042095013526010795,
+  "auroc_true_vs_spurious_or_containment": 0.5809719156040287,
+  "prob_true_median": 3.158570283024251e-09,
+  "prob_nontrue_median": 1.306915235731277e-09,
+  "prob_true_p05": 2.5131993875681367e-11,
+  "prob_true_p95": 2.2771347487554344e-07,
+  "logit_true_median": -19.57314682006836,
+  "confusion_at_0p5": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 5874,
+   "tn": 62
+  },
+  "false_edges_scored_above_best_true_sibling": 0,
+  "walks": 1,
+  "walk_nodes": 555,
+  "walk_edges": 554,
+  "walk_edge_classes": {
+   "true": 546,
+   "containment_src_in_dst": 4,
+   "containment_dst_in_src": 4
+  },
+  "walk_nontrue_edges": 8,
+  "walk_spurious_or_backward_edges": [],
+  "walk_genome_covered_bp": 4580325,
+  "walk_genome_covered_frac": 0.9992774296917492
+ }
+}

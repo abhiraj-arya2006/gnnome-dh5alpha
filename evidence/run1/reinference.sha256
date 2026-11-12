@@ -1,0 +1,5 @@
+70b1e14862e14f1ca22bccb0722b8755541d2a59cb657bbeb81c6d7422e0cb37  /home/abhiraj_arya/research/run1_evidence/reinference/raven/assembly/0_assembly.fasta
+70b1e14862e14f1ca22bccb0722b8755541d2a59cb657bbeb81c6d7422e0cb37  data/raven/assembly/0_assembly.fasta
+8a8b07c15589fbd0712b5d117b98413dd364ce92cf06cc17b19eebb09713fce1  /home/abhiraj_arya/research/run1_evidence/reinference/raven/decode/0_walks.pkl
+8a8b07c15589fbd0712b5d117b98413dd364ce92cf06cc17b19eebb09713fce1  data/raven/decode/0_walks.pkl
+max abs score diff: 0.0010898113250732422

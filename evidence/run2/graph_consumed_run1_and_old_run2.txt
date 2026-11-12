@@ -1,0 +1,32 @@
+### RUN 1: data/raven vs data/graph_1.gfa
+GFA            : data/graph_1.gfa
+GFA sha256     : b12099486f6d317024e7794759a3732c5321fe73e5236c51771b9a7027100270
+GFA counts     : S=2897  L=37364  -> expected nodes 2*S=5794, expected edges 2*L=74728
+GNNome run dir : data/raven
+0.dgl sha256   : 247ec2cd8fa169367821ea3b9745e8e7eb37338a6634b8bd38f81cb4e1fe0ce4
+0.dgl counts   : nodes=5794  edges=74728
+0_predicts.pt  : (74728,) edge scores (one per DGL edge)
+node ids       : read_to_node.pkl == ids derived from GFA order: True
+node sequences : 5794/5794 nodes in 0_reads.pkl equal the GFA segment (or its reverse complement)
+edges          : 74728 of 74728 GFA-derived edges present in 0.dgl; 0 DGL edges not explained by the GFA
+VERDICT        : MATCH - this GNNome run consumed exactly this GFA
+
+### OLD RUN 2 (INVALID): data/dh5alpha/raven vs K-12 graph_1.gfa
+GFA            : graph_1.gfa
+GFA sha256     : 62176d9d91749b6f8fdd5794b05da1a5070ec7e5e23b9963018ab7ee642dcdfc
+GFA counts     : S=2561  L=27451  -> expected nodes 2*S=5122, expected edges 2*L=54902
+GNNome run dir : data/dh5alpha/raven
+0.dgl sha256   : 569148b83d459663a418042d2fbd41ffb1f2b7cbdbede7627dda6bbbc96c1ff9
+0.dgl counts   : nodes=5122  edges=54902
+0_predicts.pt  : (54902,) edge scores (one per DGL edge)
+node ids       : read_to_node.pkl == ids derived from GFA order: True
+node sequences : 5122/5122 nodes in 0_reads.pkl equal the GFA segment (or its reverse complement)
+edges          : 54902 of 54902 GFA-derived edges present in 0.dgl; 0 DGL edges not explained by the GFA
+VERDICT        : MATCH - this GNNome run consumed exactly this GFA
+
+### OLD RUN 2 (INVALID) vs the new DH5alpha Run 2 graph
+0_predicts.pt  : (54902,) edge scores (one per DGL edge)
+node ids       : read_to_node.pkl == ids derived from GFA order: False
+node sequences : 0/1524 nodes in 0_reads.pkl equal the GFA segment (or its reverse complement)
+edges          : 8 of 5936 GFA-derived edges present in 0.dgl; 54894 DGL edges not explained by the GFA
+VERDICT        : NO MATCH

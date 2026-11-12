@@ -1,0 +1,2 @@
+round 1: minimap2 -t 2 -x map-pb | racon -t 2 -m 3 -x -5 -g -4 -w 500
+round 2: minimap2 -t 2 -x map-pb | racon -t 2 -m 3 -x -5 -g -4 -w 500

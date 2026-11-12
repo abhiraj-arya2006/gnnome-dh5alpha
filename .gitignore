@@ -1,0 +1,18 @@
+# large data: identified by DATA_MANIFEST.tsv, not versioned
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+*.maf.gz
+*.gfa
+*.dgl
+*.pt
+*.pkl
+*.cereal
+*.delta
+*.paf
+*.bam
+*.sam
+runs/
+__pycache__/
+*.pyc

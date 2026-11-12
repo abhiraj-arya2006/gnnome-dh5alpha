@@ -1,0 +1,4 @@
+printed (as written in GFA L line)                         n= 37342 |err|=0: 0.964  |err|>5: 0.0005  mean|err| 0.14
+   ... of which in GNNome walk                             n=   206 |err|>5: 0
+virtual (reverse-complement twin, same overlap reused)     n= 37342 |err|=0: 0.117  |err|>5: 0.3034  mean|err| 5.12
+   ... of which in GNNome walk                             n=   187 |err|>5: 36

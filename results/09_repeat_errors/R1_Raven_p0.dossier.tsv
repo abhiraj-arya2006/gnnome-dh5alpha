@@ -1,0 +1,5 @@
+kind	cat	typ	len	ref	ctg	repeat_family	repeat_class	repeat_copies	element	homopolymer	lowcomplexity	depth	reads_mean_identity	origin	source_reads	source_identity	junction_dist	sources
+small	indel_gt5	del	393	591774	590140				tRNA:tRNA-Met	False	False	69	0.99857	genomic_window	[]			
+breakpoint	breakpoint	local	393	591852	590218					False	False	69	0.99857	junction	[]			nucmer
+small	indel_gt5	del	121	2468405	2466967					False	False	61	0.99863	junction	[]			
+small	indel_gt5	del	100	4266383	4265375	F012	unannotated	3		False	False	65	0.99829	genomic_window	[]			

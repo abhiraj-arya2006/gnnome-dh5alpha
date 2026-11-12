@@ -1,0 +1,5 @@
+GNNome  reads=  395 bases=4,581,340 median contribution= 11641 bp  length-weighted read error=0.1042%  expected inherited errors=4,772  observed small errors (minus junction-origin estimate)=4,555
+Raven   reads= 2109 bases=4,581,274 median contribution=  1877 bp  length-weighted read error=0.1779%  expected inherited errors=8,150  observed small errors (minus junction-origin estimate)=7,920
+all reads: mean per-read error 0.1541%  median 0.0660%
+per-read error, GNNome walk reads median 0.0620% vs Raven layout reads median 0.0830%; Mann-Whitney p=2.68e-07
+GNNome walk reads in the lowest-quality 10% of all reads: 5/395 (expected 40)

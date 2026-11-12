@@ -1,0 +1,6 @@
+R1_Raven_p0 142 events; source reads: [(('S1_8797',), 135), (('S1_7576',), 3), (('S1_2682',), 1)]
+    S1_8797: +3396912-3432448 len 35575 identity 99.238% (mismatch 17 ins 147 del 108)
+    S1_7576: -3415949-3438460 len 22514 identity 99.942% (mismatch 0 ins 8 del 5)
+R1_GNNome 172 events; source reads: [(('S1_8797',), 168), (('S1_4125',), 2), (('S1_2682',), 1)]
+    S1_8797: +3396912-3432448 len 35575 identity 99.238% (mismatch 17 ins 147 del 108)
+    S1_4125: +3404092-3423288 len 19218 identity 99.393% (mismatch 5 ins 67 del 45)

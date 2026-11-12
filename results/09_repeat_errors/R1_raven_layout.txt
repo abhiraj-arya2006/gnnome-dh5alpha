@@ -1,0 +1,5 @@
+oriented segments whose first 1000 bp occur uniquely in the Raven contig: 2109  distinct reads: 2109
+consecutive pairs that are GFA edges: 2108 of 2108
+median prefix actually used by Raven (contig distance between read starts): 1876.0
+Raven used prefix minus GFA edge prefix: zero for 983 of 2108  |diff|>5: 462
+MAF cut error of the GFA edge lengths on these same edges: |err|>5 for 450 of 2103

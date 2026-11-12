@@ -1,0 +1,9 @@
+R1_Raven_p0 {('nucmer', 'local'): 1} blocks>=1kb: {'minimap2': 1, 'minimap2_nolj': 1, 'nucmer': 4}
+R1_GNNome {} blocks>=1kb: {'minimap2': 1, 'minimap2_nolj': 1, 'nucmer': 1}
+R2_Raven_p0 {('minimap2', 'local'): 6, ('minimap2_nolj', 'local'): 6, ('quast', 'local_misassembly'): 15} blocks>=1kb: {'minimap2': 44, 'minimap2_nolj': 44}
+R2_GNNome {('minimap2', 'local'): 6, ('minimap2_nolj', 'local'): 13, ('quast', 'local_misassembly'): 19} blocks>=1kb: {'minimap2': 21, 'minimap2_nolj': 30}
+R2_Raven_Racon2 {} blocks>=1kb: {'minimap2': 1, 'minimap2_nolj': 1, 'nucmer': 1}
+R2_GNNome_Racon2 {} blocks>=1kb: {'minimap2': 1, 'minimap2_nolj': 1, 'nucmer': 1}
+R2_Raven_internal_p2 {} blocks>=1kb: {'minimap2': 1, 'minimap2_nolj': 1, 'nucmer': 1}
+R2old_GNNome_K12graph {('minimap2', 'relocation'): 2, ('minimap2_nolj', 'relocation'): 12, ('minimap2_nolj', 'local'): 5, ('minimap2_nolj', 'inversion'): 2, ('nucmer', 'relocation'): 14, ('nucmer', 'local'): 5, ('nucmer', 'inversion'): 2, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'local_misassembly'): 5, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 4, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1, ('quast', 'relocation'): 1} blocks>=1kb: {'minimap2': 3, 'minimap2_nolj': 20, 'nucmer': 27}
+K12_reference {('minimap2', 'relocation'): 2, ('minimap2_nolj', 'relocation'): 11, ('minimap2_nolj', 'local'): 6, ('minimap2_nolj', 'inversion'): 2, ('nucmer', 'relocation'): 14, ('nucmer', 'local'): 5, ('nucmer', 'inversion'): 2} blocks>=1kb: {'minimap2': 3, 'minimap2_nolj': 20, 'nucmer': 27}

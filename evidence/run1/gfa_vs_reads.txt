@@ -1,0 +1,8 @@
+data/graph_1.gfa: 2897 segments, testing 200 random (seed 42)
+  vs data/CP017100_sim.fastq: same read name 200/200, identical sequence 200/200
+  vs example/ecoli.fasta.gz: same read name 93/200, identical sequence 0/200
+  vs data/dh5alpha/simulated_reads.fastq.gz: same read name 200/200, identical sequence 0/200
+graph_1.gfa: 2561 segments, testing 200 random (seed 42)
+  vs data/CP017100_sim.fastq: same read name 200/200, identical sequence 0/200
+  vs example/ecoli.fasta.gz: same read name 200/200, identical sequence 200/200
+  vs data/dh5alpha/simulated_reads.fastq.gz: same read name 200/200, identical sequence 0/200

@@ -1,0 +1,11 @@
+160:raven --graphical-fragment-assembly data/dh5alpha/raven/output/dh5alpha_asm.gfa -t6 data/dh5alpha/simulated_reads.fastq.gz > data/dh5alpha/raven/output/dh5alpha_asm.fasta
+162:python create_inference_graphs.py --reads data/dh5alpha/simulated_reads.fastq.gz --gfa data/dh5alpha/raven/output/dh5alpha_asm.gfa --asm raven --out data/dh5alpha
+163:python create_inference_graphs.py --reads data/dh5alpha/simulated_reads.fastq.gz --gfa graph_1.gfa --asm raven --out data/dh5alpha
+300:cp data/dh5alpha/simulated_reads.fastq.gz    data/dh5alpha_original_backup/
+306:cp data/dh5alpha/simulated_reads.fastq.gz    data/dh5alpha_original_backup/
+307:sha256sum data/dh5alpha_original_backup/CP017100.fasta data/dh5alpha_original_backup/simulated_reads.fastq.gz data/dh5alpha_original_backup/raven/output/dh5alpha_asm.gfa
+330:if [ ! -f "data/dh5alpha/simulated_reads.fastq.gz" ]; then     echo "ERROR: DH5alpha reads not found";     exit 1; fi
+335:../../../../vendor/raven-1.8.1/build/bin/raven     -t 6 -p0     ../../dh5alpha/simulated_reads.fastq.gz     > assembly.fasta 2> raven.log
+345:../../../../vendor/raven-1.8.1/build/bin/raven     -t 6 -p0     ../../dh5alpha/simulated_reads.fastq.gz     > assembly.fasta 2> raven.log
+352:../../../../vendor/raven-1.8.1/build/bin/raven     -t 6 -p0     ../../dh5alpha/simulated_reads.fastq.gz     > assembly.fasta 2> raven.log
+356:../../../../vendor/raven-1.8.1/build/bin/raven     -t 6 -p0     ../../dh5alpha/simulated_reads.fastq.gz     > assembly.fasta 2> raven.log

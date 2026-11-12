@@ -1,0 +1,7 @@
+date_utc: Thu Nov 12 18:01:13 UTC 2026
+cwd: /home/abhiraj_arya/research/run2_corrected/02_raven_p0
+binary: /home/abhiraj_arya/research/GNNome/vendor/raven-1.8.1/build/bin/raven
+binary_sha256: 2ba8260b04c6f19ec77da5e33d1b2cf6e63f0ff76e162bdbc20a7f6cc3f3cbdd
+reads_sha256: f5f25cc4da2201e12d4dc74024c468fe5b9b6c49447e16d9193251807815e38e
+command: /home/abhiraj_arya/research/GNNome/vendor/raven-1.8.1/build/bin/raven -t 4 -p0 /home/abhiraj_arya/research/run2_corrected/00_reads/simulated_reads.fastq.gz
+exit=0

@@ -1,0 +1,3 @@
+/home/abhiraj_arya/research/run2_corrected/02_raven_p0/graph_1.gfa S=762 L=2968
+/home/abhiraj_arya/research/GNNome/graph_1.gfa S=2561 L=27451
+/home/abhiraj_arya/research/GNNome/data/graph_1.gfa S=2897 L=37364

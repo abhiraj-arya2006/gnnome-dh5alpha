@@ -1,0 +1,19 @@
+GFA            : /home/abhiraj_arya/research/run2_corrected/02_raven_p0/graph_1.gfa
+GFA sha256     : 6d5df9820ffddae793538c091eb8ac98013a890ab8ed1bd402b454ed4c8a5483
+GFA counts     : S=762  L=2968  -> expected nodes 2*S=1524, expected edges 2*L=5936
+GNNome run dir : /home/abhiraj_arya/research/run2_corrected/04_gnnome/raven
+0.dgl sha256   : fa0859d6ecc3b55dff2a969628c84999774163f60891662aa0208f03ee39fbde
+0.dgl counts   : nodes=1524  edges=5936
+0_predicts.pt  : (5936,) edge scores (one per DGL edge)
+node ids       : read_to_node.pkl == ids derived from GFA order: True
+node sequences : 1524/1524 nodes in 0_reads.pkl equal the GFA segment (or its reverse complement)
+edges          : 5936 of 5936 GFA-derived edges present in 0.dgl; 0 DGL edges not explained by the GFA
+VERDICT        : MATCH - this GNNome run consumed exactly this GFA
+
+### CONTROL: same GNNome run vs the stale K-12 graph
+0.dgl counts   : nodes=1524  edges=5936
+0_predicts.pt  : (5936,) edge scores (one per DGL edge)
+node ids       : read_to_node.pkl == ids derived from GFA order: False
+node sequences : 0/5122 nodes in 0_reads.pkl equal the GFA segment (or its reverse complement)
+edges          : 8 of 54902 GFA-derived edges present in 0.dgl; 5928 DGL edges not explained by the GFA
+VERDICT        : NO MATCH

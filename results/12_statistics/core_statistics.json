@@ -1,0 +1,232 @@
+{
+ "gnnome_minus_raven_errors_per_100kb_window": {
+  "run1_unpolished": {
+   "windows": 46,
+   "raven_total": 8083,
+   "gnnome_total": 4721,
+   "diff_per_100kb_mean": -73.08695652173913,
+   "ci95": [
+    -85.50054347826087,
+    -61.21739130434783
+   ],
+   "windows_gnnome_lower": 46,
+   "windows_gnnome_higher": 0,
+   "windows_equal": 0,
+   "wilcoxon_p": 3.510730721578236e-09,
+   "ratio_gnnome_over_raven": 0.5840653222813312
+  },
+  "run1_unpolished_indel_gt5": {
+   "windows": 46,
+   "raven_total": 3,
+   "gnnome_total": 35,
+   "diff_per_100kb_mean": 0.6956521739130435,
+   "ci95": [
+    0.45652173913043476,
+    0.9347826086956522
+   ],
+   "windows_gnnome_lower": 3,
+   "windows_gnnome_higher": 29,
+   "windows_equal": 14,
+   "wilcoxon_p": 6.855475926738066e-06,
+   "ratio_gnnome_over_raven": 11.666666666666666
+  },
+  "run2_unpolished": {
+   "windows": 46,
+   "raven_total": 476536,
+   "gnnome_total": 454458,
+   "diff_per_100kb_mean": -479.95652173913044,
+   "ci95": [
+    -579.5005434782609,
+    -387.4559782608696
+   ],
+   "windows_gnnome_lower": 43,
+   "windows_gnnome_higher": 3,
+   "windows_equal": 0,
+   "wilcoxon_p": 5.580702149646852e-09,
+   "ratio_gnnome_over_raven": 0.9536698171806537
+  },
+  "run2_unpolished_indel_gt5": {
+   "windows": 46,
+   "raven_total": 271,
+   "gnnome_total": 378,
+   "diff_per_100kb_mean": 2.3260869565217392,
+   "ci95": [
+    1.326086956521739,
+    3.2831521739130354
+   ],
+   "windows_gnnome_lower": 10,
+   "windows_gnnome_higher": 33,
+   "windows_equal": 3,
+   "wilcoxon_p": 0.00013620485372047933,
+   "ratio_gnnome_over_raven": 1.3948339483394834
+  },
+  "run2_racon2": {
+   "windows": 46,
+   "raven_total": 1346,
+   "gnnome_total": 1403,
+   "diff_per_100kb_mean": 1.2391304347826086,
+   "ci95": [
+    -0.41304347826086957,
+    2.8043478260869565
+   ],
+   "windows_gnnome_lower": 18,
+   "windows_gnnome_higher": 27,
+   "windows_equal": 1,
+   "wilcoxon_p": 0.12413575652196863,
+   "ratio_gnnome_over_raven": 1.0423476968796435
+  },
+  "run2_racon2_vs_raven_internal_p2": {
+   "windows": 46,
+   "raven_total": 1664,
+   "gnnome_total": 1403,
+   "diff_per_100kb_mean": -5.673913043478261,
+   "ci95": [
+    -7.6521739130434785,
+    -3.5869565217391304
+   ],
+   "windows_gnnome_lower": 36,
+   "windows_gnnome_higher": 9,
+   "windows_equal": 1,
+   "wilcoxon_p": 2.0393994574303116e-05,
+   "ratio_gnnome_over_raven": 0.8431490384615384
+  }
+ },
+ "gnnome_auroc_true_vs_spurious": {
+  "run1": {
+   "auroc": 0.9998928820095335,
+   "ci95": [
+    0.9998125435166836,
+    0.9999598307535751
+   ],
+   "n_true": 74684,
+   "n_spurious": 2,
+   "note": "only 2 spurious edges: the CI is wide and the estimate is dominated by these few edges"
+  },
+  "run2": {
+   "auroc": 0.8973016683690841,
+   "ci95": [
+    0.8486976506639428,
+    0.9447576183180116
+   ],
+   "n_true": 5874,
+   "n_spurious": 4,
+   "note": "only 4 spurious edges: the CI is wide and the estimate is dominated by these few edges"
+  }
+ },
+ "run1_junction_cut_error_model": {
+  "n": 394,
+  "pearson_r": 0.9978269924047577,
+  "ci95": [
+   0.9973511729463425,
+   0.9982174147827061
+  ],
+  "p": 0.0
+ },
+ "large_indels_at_gnnome_junctions": {
+  "R1_GNNome": {
+   "indel_gt5": 35,
+   "within_50bp": 35,
+   "expected": 0.3040136728555401,
+   "binomial_p": 7.225659884527321e-73
+  },
+  "R2_GNNome": {
+   "indel_gt5": 378,
+   "within_50bp": 265,
+   "expected": 4.518430818950968,
+   "binomial_p": 0.0
+  }
+ },
+ "enrichment_fdr": {
+  "tests": 176,
+  "significant_q_lt_0p05": [
+   {
+    "assembly": "R2_GNNome_Racon2",
+    "events": "indel_le5",
+    "track": "homopolymer",
+    "in_track": 66,
+    "n": 1367,
+    "fold": 19.450004584110584,
+    "p": 0.000999000999000999,
+    "q": 0.0293040293040293
+   },
+   {
+    "assembly": "R2_GNNome_Racon2",
+    "events": "indel_le5",
+    "track": "lowcomplexity",
+    "in_track": 78,
+    "n": 1367,
+    "fold": 17.384931341121398,
+    "p": 0.000999000999000999,
+    "q": 0.0293040293040293
+   },
+   {
+    "assembly": "R2_Raven_Racon2",
+    "events": "indel_le5",
+    "track": "homopolymer",
+    "in_track": 68,
+    "n": 1312,
+    "fold": 20.879464917320117,
+    "p": 0.000999000999000999,
+    "q": 0.0293040293040293
+   },
+   {
+    "assembly": "R2_Raven_Racon2",
+    "events": "indel_le5",
+    "track": "lowcomplexity",
+    "in_track": 75,
+    "n": 1312,
+    "fold": 17.41703883040642,
+    "p": 0.000999000999000999,
+    "q": 0.0293040293040293
+   },
+   {
+    "assembly": "R2_Raven_internal_p2",
+    "events": "indel_le5",
+    "track": "homopolymer",
+    "in_track": 83,
+    "n": 1614,
+    "fold": 20.716617570855124,
+    "p": 0.000999000999000999,
+    "q": 0.0293040293040293
+   },
+   {
+    "assembly": "R2_Raven_internal_p2",
+    "events": "indel_le5",
+    "track": "lowcomplexity",
+    "in_track": 94,
+    "n": 1614,
+    "fold": 17.744804336029432,
+    "p": 0.000999000999000999,
+    "q": 0.0293040293040293
+   }
+  ],
+  "min_q": 0.0293040293040293,
+  "note": "one-sided circular-shift permutation tests (enrichment), BH across all tests"
+ },
+ "read_selection": {
+  "run1": {
+   "gnnome_reads": 395,
+   "raven_reads": 2109,
+   "median_err_gnnome_pct": 0.06199999999999539,
+   "median_err_raven_pct": 0.08299999999999974,
+   "diff_median_pct": -0.02100000000000435,
+   "ci95_pct": [
+    -0.030000000000007798,
+    -0.0070000000000014495
+   ],
+   "mannwhitney_p": 2.67803795637785e-07
+  },
+  "run2": {
+   "gnnome_reads": 555,
+   "raven_reads": 654,
+   "median_err_gnnome_pct": 12.041000000000002,
+   "median_err_raven_pct": 12.536000000000003,
+   "diff_median_pct": -0.495000000000001,
+   "ci95_pct": [
+    -0.8590374999999987,
+    -0.25348749999999576
+   ],
+   "mannwhitney_p": 3.3634863510275118e-09
+  }
+ }
+}

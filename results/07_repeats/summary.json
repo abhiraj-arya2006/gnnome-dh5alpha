@@ -1,0 +1,36 @@
+{
+ "genome_len": 4583637,
+ "self_alignment_hits": 520,
+ "repeat_loci": 101,
+ "repeat_families": 33,
+ "repeat_bp": 145315,
+ "repeat_frac": 0.03170299044186963,
+ "family_classes": {
+  "IS_transposase": 9,
+  "rRNA": 1,
+  "Rhs": 2,
+  "unannotated": 18,
+  "phage_related": 2,
+  "tRNA": 1
+ },
+ "repeat_bp_by_class": {
+  "unannotated": 27150,
+  "Rhs": 16035,
+  "tRNA": 708,
+  "phage_related": 6272,
+  "rRNA": 38841,
+  "IS_transposase": 56309
+ },
+ "elements_by_class": {
+  "IS_transposase": 65,
+  "rRNA": 22,
+  "tRNA": 85,
+  "phage_related": 35,
+  "Rhs": 5,
+  "CRISPR": 2
+ },
+ "homopolymers_ge7": 1236,
+ "homopolymers_ge8": 235,
+ "lowcomplexity_intervals": 1363,
+ "lowcomplexity_bp": 15044
+}

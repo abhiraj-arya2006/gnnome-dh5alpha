@@ -1,0 +1,26 @@
+===== run1
+S1_291(+2448990-2468941) -> S1_6494(+676685-697208)  GFA overlap 179 bp  GNNome prob 5.00e-05  in walk=0
+  src end window 2468762-2468941: repeats -  elements -
+  dst start window 676685-676864: repeats -  elements ['tRNA|tRNA-Lys@676687-676763']
+  genomic windows aligned: no alignment (overlap too short / different sequence)
+S1_6494(-676685-697208) -> S1_291(-2448990-2468941)  GFA overlap 179 bp  GNNome prob 5.00e-05  in walk=0
+  src end window 676685-676864: repeats -  elements ['tRNA|tRNA-Lys@676687-676763']
+  dst start window 2468762-2468941: repeats -  elements -
+  genomic windows aligned: no alignment (overlap too short / different sequence)
+===== run2
+S1_3975(+605237-627812) -> S1_12909(+3560079-3588950)  GFA overlap 2202 bp  GNNome prob 0.00e+00  in walk=0
+  src end window 625610-627812: repeats ['F005|Rhs|5@624575-628424']  elements ['Rhs|RHS element protein@624693-628887']
+  dst start window 3560079-3562281: repeats ['F005|Rhs|5@3559736-3563457']  elements ['Rhs|RHS element protein@3559737-3563973']
+  genomic windows aligned: 1557/2202 bp identical-columns, block 1627 bp
+S1_12909(-3560079-3588950) -> S1_3975(-605237-627812)  GFA overlap 2202 bp  GNNome prob 0.00e+00  in walk=0
+  src end window 3560079-3562281: repeats ['F005|Rhs|5@3559736-3563457']  elements ['Rhs|RHS element protein@3559737-3563973']
+  dst start window 625610-627812: repeats ['F005|Rhs|5@624575-628424']  elements ['Rhs|RHS element protein@624693-628887']
+  genomic windows aligned: 1557/2202 bp identical-columns, block 1627 bp
+S1_12909(-3560079-3588950) -> S1_12938(-3685594-3704756)  GFA overlap 1022 bp  GNNome prob 0.00e+00  in walk=0
+  src end window 3560079-3561101: repeats ['F005|Rhs|5@3559736-3563457']  elements ['Rhs|RHS element protein@3559737-3563973']
+  dst start window 3703734-3704756: repeats ['F005|Rhs|5@3702611-3706445']  elements ['Rhs|RHS element protein@3702728-3706862']
+  genomic windows aligned: 358/1022 bp identical-columns, block 358 bp
+S1_12938(+3685594-3704756) -> S1_12909(+3560079-3588950)  GFA overlap 1022 bp  GNNome prob 0.00e+00  in walk=0
+  src end window 3703734-3704756: repeats ['F005|Rhs|5@3702611-3706445']  elements ['Rhs|RHS element protein@3702728-3706862']
+  dst start window 3560079-3561101: repeats ['F005|Rhs|5@3559736-3563457']  elements ['Rhs|RHS element protein@3559737-3563973']
+  genomic windows aligned: 358/1022 bp identical-columns, block 358 bp

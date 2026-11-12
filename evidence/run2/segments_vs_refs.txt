@@ -1,0 +1,2 @@
+CP017100.fasta: segments aligned 762, identity 0.4132
+Ecoli_K12_ref.fasta: segments aligned 762, identity 0.4102

@@ -1,0 +1,17 @@
+Raven layout around contig position 590140 (deletion of ref 591774-592167):
+  S1_3099+(true +568546-590002) -> S1_10957: contig piece 3858 bp, GFA prefix 3858, edge written, true cut error 0
+  S1_10957+(true +572384-592754) -> S1_5488: contig piece 1347 bp, GFA prefix 1354, edge TWIN, true cut error 7
+  S1_5488-(true -573724-595155) -> S1_5956: contig piece 2694 bp, GFA prefix 2697, edge TWIN, true cut error 3
+  S1_5956-(true -576440-597197) -> S1_4655: contig piece 2577 bp, GFA prefix 2578, edge written, true cut error 0
+  S1_4655+(true +579019-600748) -> S1_12590: contig piece 3469 bp, GFA prefix 3469, edge written, true cut error 0
+  S1_12590-(true -582483-606141) -> S1_9023: contig piece 2597 bp, GFA prefix 2597, edge written, true cut error 0
+  S1_9023+(true +585064-607734) -> S1_11030: contig piece 335 bp, GFA prefix 335, edge written, true cut error 0
+  S1_11030-(true -585404-608934) -> S1_7704: contig piece 3968 bp, GFA prefix 3963, edge TWIN, true cut error -5
+  S1_7704-(true -589375-609791) -> S1_3959: contig piece 2448 bp, GFA prefix 2449, edge written, true cut error -391 <== spans deletion
+  S1_3959+(true +592222-614850) -> S1_1157: contig piece 1540 bp, GFA prefix 1540, edge written, true cut error 0
+  S1_1157+(true +593765-616469) -> S1_9827: contig piece 2966 bp, GFA prefix 2966, edge written, true cut error 0
+  S1_9827+(true +596730-617857) -> S1_13364: contig piece 3610 bp, GFA prefix 3610, edge written, true cut error 0
+  S1_13364-(true -600336-626134) -> S1_1900: contig piece 1779 bp, GFA prefix 1780, edge TWIN, true cut error 1
+  S1_1900-(true -602089-626618) -> S1_11779: contig piece 5462 bp, GFA prefix 5464, edge TWIN, true cut error 2
+  S1_11779+(true +607575-630143) -> S1_1452: contig piece 3271 bp, GFA prefix 3268, edge TWIN, true cut error -3
+  S1_1452-(true -610831-632234) -> S1_6443: contig piece 3852 bp, GFA prefix 3848, edge TWIN, true cut error -2

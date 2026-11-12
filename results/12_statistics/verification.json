@@ -1,0 +1,212 @@
+[
+ {
+  "task": 1,
+  "check": "Run 1 evidence manifest verifies",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 1,
+  "check": "Run 2 evidence manifest verifies",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 1,
+  "check": "all 9 inventoried assemblies still match their recorded SHA256",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 2,
+  "check": "conditions table has Run 1 and Run 2 columns for every factor",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 3,
+  "check": "read counts 14,884 / 14,874",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 3,
+  "check": "coverage 60.00x / 30.00x",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 3,
+  "check": "FASTQ orientation matches MAF (500/500 both)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 3,
+  "check": "PBSIM MAF '-' strand start shift: 5,224 in Run 1, 0 in Run 2",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 3,
+  "check": "identical error-type shares (6:55:39 model) in both runs",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 4,
+  "check": "Run 1 graph = 2*S nodes / 2*L edges (5,794 / 74,728)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 4,
+  "check": "Run 2 graph = 2*S nodes / 2*L edges (1,524 / 5,936)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 5,
+  "check": "edge classes sum to all edges (both runs)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 5,
+  "check": "GNNome walks use 0 spurious/backward edges (both runs)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 5,
+  "check": "Run 2 GNNome probabilities collapsed (median p(true) < 1e-6)",
+  "passed": true,
+  "detail": "3.16e-09"
+ },
+ {
+  "task": 6,
+  "check": "all 21 main replicates collected (7 conditions x 3 seeds), no failures",
+  "passed": true,
+  "detail": "21 main + 2 Run 1-subsample"
+ },
+ {
+  "task": 6,
+  "check": "GNNome copies more accurate reads than Raven in every replicate",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 7,
+  "check": "GenBank sequence identical to CP017100.fasta",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 7,
+  "check": "7 rRNA operons annotated (E. coli expectation)",
+  "passed": true,
+  "detail": "7 clusters"
+ },
+ {
+  "task": 7,
+  "check": "Rhs family has 5 copies",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 8,
+  "check": "old Run 2 GNNome has the K-12-vs-DH5a breakpoint pattern (nucmer)",
+  "passed": true,
+  "detail": "21 breakpoints"
+ },
+ {
+  "task": 8,
+  "check": "all polished assemblies: 0 breakpoints in every source",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 9,
+  "check": "R1_GNNome: contig rebuilt from walk is byte-identical to the assembly",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 9,
+  "check": "R2_GNNome: contig rebuilt from walk is byte-identical to the assembly",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 9,
+  "check": "Run 1 junction cut-error model r > 0.99",
+  "passed": true,
+  "detail": "r=0.9978"
+ },
+ {
+  "task": 9,
+  "check": "Run 1: all 35 GNNome indels >5 bp are junction-origin",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 9,
+  "check": "Run 2: 15/15 junction-origin GNNome breakpoints on twin edges",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 9,
+  "check": "Raven tRNA-Met collapse traced to edge S1_7704->S1_3959 (cut error -391)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 9,
+  "check": "all 4 Run 2 spurious edges join Rhs (F005) copies",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 9,
+  "check": "no repeat-class enrichment survives FDR (only homopolymer/low-complexity)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 10,
+  "check": "Run 1 polished Raven == GNNome, exact substring of reference",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 10,
+  "check": "Run 2 residual errors: >40 % in homopolymers >=4 (both)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 11,
+  "check": "figures F1-F9 exist as PNG and PDF",
+  "passed": true,
+  "detail": "9/9"
+ },
+ {
+  "task": 12,
+  "check": "Run 1 unpolished: GNNome fewer errors in 46/46 windows",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 12,
+  "check": "Run 2 polished: no significant difference (CI spans 0)",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "task": 12,
+  "check": "sensitivity statistics written",
+  "passed": true,
+  "detail": ""
+ }
+]

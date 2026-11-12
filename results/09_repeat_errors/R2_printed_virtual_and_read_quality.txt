@@ -1,0 +1,5 @@
+printed       n= 2937 exact 0.234 |err|>5 0.255 mean|err| 4.8 | in walk n=258 |err|>5 55 mean|err| 3.8
+virtual twin  n= 2937 exact 0.004 |err|>5 0.937 mean|err| 81.4 | in walk n=288 |err|>5 272 mean|err| 76.4
+GNNome  reads= 555 bases=4,680,964 median contribution=6285 weighted read error=12.606%  expected inherited error events=590,103
+Raven   reads= 654 bases=4,684,312 median contribution=5291 weighted read error=13.514%  expected inherited error events=633,028
+all reads mean error 14.005%; GNNome walk reads median 12.041% vs Raven layout median 12.536%; MWU p=3.36e-09; GNNome reads in worst 10%: 3/555 (exp 56)

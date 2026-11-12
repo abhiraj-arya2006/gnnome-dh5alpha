@@ -1,0 +1,10 @@
+== data/raven/quast_results
+/home/abhiraj_arya/miniconda3/envs/gnnome/bin/quast.py data/raven/assembly/0_assembly.fasta -r data/CP017100.fasta -o data/raven/quast_results
+Version: 5.3.0
+Started: 2026-07-09 21:06:20
+    CP017100.fasta, length = 4583637, num fragments = 1, GC % = 50.77
+== data/classical_raven_quast_results
+/home/abhiraj_arya/miniconda3/envs/gnnome/bin/quast.py data/CP017100_assembly.fasta -r data/CP017100.fasta -o data/classical_raven_quast_results
+Version: 5.3.0
+Started: 2026-07-09 21:12:11
+    CP017100.fasta, length = 4583637, num fragments = 1, GC % = 50.77
