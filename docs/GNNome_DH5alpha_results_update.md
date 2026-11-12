@@ -262,14 +262,65 @@ Seven conditions × three seeds, each through the identical pipeline. The first 
 
 ---
 
-## 12. Verification and reproducibility
+## 12. What changes in the v28 manuscript
+
+| v28 item | Status | Correction |
+|---|---|---|
+| Title, abstract, RQ answers, conclusion ("repeat-linked failure") | **Invalid** | GNNome output was K-12; reframe around read selection, the overlap-reuse bug and polishing (§11). |
+| Table 7 / Fig. 4, **GNNome column** (23 misassemblies, NGA50 514,071, 99,206 bp unaligned) | **Invalid** (K-12 assembly) | Replace with the corrected Run 2 GNNome results (§4). |
+| Table 7 / Fig. 4, **Raven column** (1.09 / 35.25 per 100 kbp, NGA50 4,578,890) | **Valid** | Reproduced **byte-for-byte** by a fresh Raven `-p 2` run (SHA256 `7e6cbec8…`). |
+| §3.5–3.6, Figs. 5–6, Table 8 (1,258 bp repeat at the breakpoints) | Observation correct, attribution wrong | The repeat is an IS3 element. The breakpoints are the K-12 ↔ DH5α inversion (§2.2). |
+| §2.2 "PBSIM3 … at **20×** depth" | **Wrong** | The recovered seed and command prove **`--depth 30`** (30.00×, 14,874 reads; regeneration byte-identical). |
+| Table 4 (1,524 nodes / 5,936 edges, 2 Racon passes, 71.4 s) | Describes Raven's graph, **not** what GNNome used | These counts equal the corrected DH5α graph (762 S × 2, 2,968 L × 2), but the old GNNome run consumed the K-12 graph (5,122 / 54,902). |
+| §2.4 "[DATA REQUIRED: reconcile `-p0` with the two logged Racon passes]" | Resolved | Two different runs: **Run 1** used the Raven fork with `-p0`; the **old Run 2** baseline used Conda Raven `-t6` with 2 Racon passes. The corrected Run 2 uses the fork (`-p0` for the graph, `-p 2` for the reference baseline). |
+| §2.9 "Hardware: [DATA REQUIRED]" | Resolved | Original runs: LOQ host (12 logical CPUs, 16 GB RAM). Corrected runs: WSL2, 4 CPUs, 11 GB RAM. CPU-only inference. |
+| Fig. 1 "a single Raven graph yields two assemblies" | Not true for the v28 run | True for the corrected Run 2 (proven edge-by-edge). |
+| K-12 control (Tables 5–6, Fig. 3) | **Valid** | Unaffected: separate Hifiasm-based pipeline. |
+| "All results from single runs" | Superseded | 21 replicates + paired statistics (§10). |
+
+## 13. Complete work log (what was done)
+
+**A. Recovery and integrity**
+1. Recovered Run 1 from GitHub commit `d3ea188` and verified it byte-identical to the local copy (211-file manifest).
+2. Proved the Run 1 graph is DH5α (200/200 sampled segments match the 60× DH5α reads; 0/200 match K-12).
+3. Re-ran Run 1 GNNome inference in a sandbox: byte-identical assembly.
+4. Showed that Conda Raven writes no usable graph, while the `print_graphs` fork (`3207c8d`) does (behavioural test); identified the stale K-12 graph used by the old Run 2.
+5. Recovered the Run 2 PBSIM3 seed (`1783636376`) by search; the full 30× regeneration is byte-identical.
+6. Generated a fresh, correct Run 2: graph, GNNome inference, QUAST, polishing (472-file manifest, `run2_corrected/`).
+7. Raven's graph is **reproducible**: two separate invocations gave identical graph SHA256.
+8. QUAST thread count (3 vs 1) shown not to change any metric.
+9. Unpolished Run 2 assemblies (~88 % identity) fail QUAST's default 95 % threshold, so they are scored with `--min-identity 80`, labelled supplementary.
+
+**B. Analysis (12 tasks, in `analysis/`)**
+1. Inventory of all 9 assemblies with hashes and validity status.
+2. Run 1 vs Run 2 conditions table.
+3. Read characterization from the PBSIM truth: length, accuracy, error position, coverage. **Correction applied:** the Run 1 alignment file has shifted start coordinates for 5,224 reverse-strand reads, which were re-anchored by exact sequence match.
+4. Graph complexity for Run 1, Run 2 and the K-12 control.
+5. Ground-truth label for every edge (true / containment / spurious); GNNome AUROC, calibration and walk analysis.
+6. 21-replicate sensitivity experiment (+2 Run 1-read subsamples).
+7. Repeat annotation: GenBank CP017100.1 (sequence-verified) + nucmer self-alignment + dustmasker + homopolymers.
+8. Breakpoints recalculated three ways (QUAST, minimap2 without long joins, nucmer).
+9. Region-level error tracing: inherited vs junction vs genomic-window origin; exact GNNome walk rebuild (reproducing GNNome's prefix clamp for containment edges); overlap cut errors for every true edge; mis-anchored and spurious edges; the tRNA collapse; the 3.4 Mb hotspot; the 5 shared Run 2 breakpoints traced to 3 reads (S1_9409, S1_2717, S1_11228) copied by both assemblers.
+10. Polishing: Run 1 polished for the first time (same protocol); per-round QUAST; residual-error composition.
+11. Nine figures with colour palettes validated for colour-vision deficiency.
+12. Statistics: paired 100 kb-window tests with block bootstrap, AUROC bootstrap, binomial and Fisher tests, BH-FDR over 176 tests, paired replicate tests; `verify_all.py` (35/35 PASS).
+
+**C. Problems found and fixed during the work**
+- MAF coordinate shift (above); edge labels and junction analysis re-run after the fix.
+- Containment edges initially mislabelled with a 1 kb tolerance; replaced with strict geometry.
+- GNNome's prefix clamp initially omitted from the walk rebuild; added, rebuild now byte-identical.
+- The origin test could mislabel tandem-repeat collapses as read errors; a genomic-window check was added, which is what caught the tRNA collapse.
+- Contig-length field in the replicate pipeline recorded only the last contig; lengths are now read from the FASTA.
+- A bug in the Run 1 read-subsampling script (blank MAF lines) was fixed and those replicates rerun.
+
+## 14. Verification and reproducibility
 
 - `analysis/scripts/verify_all.py` re-checks every claim above from the files on disk: **35/35 PASS** (results in `analysis/12_statistics/verification.json`).
 - Evidence folders: `run1_evidence/` (211-file manifest) and `run2_corrected/` (472-file manifest), both verified. Original data unmodified.
 - Analysis: `analysis/01_inventory` … `analysis/12_statistics`; scripts in `analysis/scripts/`; figures (PNG + PDF) in `analysis/11_figures/`.
 - Full provenance report: `run1_run2_evidence_report.md`.
 
-## 13. Limitations and next steps
+## 15. Limitations and next steps
 
 1. **Simulated reads only.** The next step is real DH5α PacBio/ONT data.
 2. **One genome**, single-contig bacterial assemblies.
