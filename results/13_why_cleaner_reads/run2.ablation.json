@@ -1,0 +1,18 @@
+{
+ "model_reproduces_saved_logits_maxabsdiff": 4.99877929627246e-06,
+ "real": {
+  "nodes": 1439,
+  "top_edge_cleaner_than_mean_alt_frac": 0.7706740792216817,
+  "top_edge_cleanest_of_all_frac": 0.4419735927727589,
+  "median_err_diff": -0.014639999999999986,
+  "chance_cleanest": 0.2827081747686334
+ },
+ "similarity_ablated": {
+  "nodes": 1439,
+  "top_edge_cleaner_than_mean_alt_frac": 0.5608061153578874,
+  "top_edge_cleanest_of_all_frac": 0.2849200833912439,
+  "median_err_diff": -0.0032200000000000006,
+  "chance_cleanest": 0.2827081747686334
+ },
+ "rank_corr_scores_real_vs_ablated": 0.6335597688536156
+}

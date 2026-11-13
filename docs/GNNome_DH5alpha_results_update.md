@@ -12,7 +12,7 @@ Prepared 12 Nov 2026 · All numbers below are re-verified from files on disk (35
 | **What GNNome assembled in "DH5α"** | Assumed DH5α | The v28 DH5α GNNome run consumed a **stale K-12 graph** (proven edge-by-edge). The v28 DH5α GNNome numbers describe K-12, not DH5α. |
 | **The "repeat-linked failure"** | 23 misassemblies at a 1,258 bp inverted repeat | That repeat is an **IS3-family insertion element**. The breakpoints are the **IS-mediated ~210 kb inversion that separates K-12 from DH5α**, reproduced exactly when the two *reference genomes* are aligned with no assembler involved. |
 | **GNNome vs Raven on DH5α (unpolished)** | GNNome worse | GNNome is **more accurate** in both runs: Run 1 (accurate reads) **44 % fewer mismatches and 41 % fewer indels**; Run 2 (noisy reads) 4.6 % fewer errors (p = 6×10⁻⁹). |
-| **Why** | Repeat | **Read selection.** GNNome's walk copies systematically more accurate reads. This **predicts the observed error counts to within 3–5 %**, and holds in **23/23** replicates (p = 2×10⁻⁷). |
+| **Why** | Repeat | **Read selection.** GNNome's walk copies systematically more accurate reads. This **predicts the observed error counts to within 3–5 %**, and holds in **23/23** replicates (p = 2×10⁻⁷). Mechanism: the model's **overlap-similarity input** tracks read accuracy (ρ ≈ −0.9). Removing it drops the choice of the cleanest read to chance (§5.1). |
 | **Weakness of GNNome** | Repeats | Not repeats: **0** spurious (repeat-induced) edges used in any run or replicate. The weakness is an **interface bug**: GNNome reuses Raven's one-directional overlap length for the reverse-complement edge, creating **all** of GNNome's large indels (35/35) and **15/15** of its junction "misassemblies". |
 | **After polishing** | — | Advantage disappears. Run 1: Raven and GNNome become **sequence-identical, error-free** assemblies. Run 2: no significant difference. |
 | **Replication** | Single run | **21 controlled replicates** (7 conditions × 3 seeds): GNNome's unpolished advantage **grows with read accuracy** (r = 0.95, p = 2×10⁻⁶), up to **+3.1 pp** identity. |
@@ -120,6 +120,34 @@ Without polishing, every assembly base is **copied from exactly one read**. I tr
 - Run 2 shows the same pattern: 3/555 vs 56 expected; source-read error 12.6 % vs 13.5 %.
 - Median per-read error difference: Run 1 −0.021 pp, 95 % CI [−0.030, −0.007]; Run 2 −0.50 pp, [−0.86, −0.25].
 - **The quality of the reads each assembler copied explains the full accuracy difference.** It has nothing to do with repeats.
+
+### 5.1 Why GNNome chooses cleaner reads (mechanism, tested causally)
+
+GNNome's model is given exactly **two inputs per edge**: overlap length and **overlap similarity**. Overlap similarity is `1 − edit distance / overlap length`, computed by aligning the overlapping ends of the two reads (`graph_parser.py:101–113`, `utils/data_utils.py:34–38`). The pretrained weights take a 2-dimensional edge input (`linear1_edge.weight` is 16×2), and `use_similarities: True` is set.
+
+Two reads covering the same stretch of genome differ only through sequencing errors, so **overlap similarity is a direct read-accuracy signal**. The chain of evidence:
+
+| Step | Run 1 | Run 2 |
+|---|---:|---:|
+| Overlap similarity vs. true error of the two reads (Spearman ρ, true edges) | −0.91 | −0.95 |
+| Model edge score vs. overlap similarity (ρ, true edges) | +0.58 | +0.72 |
+| GNNome walk steps that had alternative true overlaps | 393 | 524 |
+| … where GNNome took the **cleaner** next read | **85 %** (p = 6×10⁻³⁵) | **76 %** (p = 2×10⁻³⁴) |
+
+**Causal test (ablation).** The pretrained model was re-run on the same graphs with overlap similarity replaced by its mean. The model reproduces the saved scores to within 0.001.
+
+| At nodes with ≥2 true out-edges, the top-scored edge leads to… | Run 1 normal | Run 1 similarity removed | Run 2 normal | Run 2 similarity removed |
+|---|---:|---:|---:|---:|
+| a cleaner read than the alternatives | 85 % | 65 % | 77 % | 56 % |
+| the cleanest read of all | 10.1 % | 6.2 % (chance 8.3 %) | 44.2 % | 28.5 % (chance 28.3 %) |
+
+Without the similarity input, picking the cleanest read falls to chance level (in Run 2, essentially exactly chance). Run 1 keeps a smaller leftover preference (65 %, where no preference would give 50 %). It probably comes through the overlap-length input; this was not tested.
+
+**Raven has no equivalent signal.** Across all 23 replicates, the reads Raven copies are about as error-prone as the average read (for example 13.4 % vs 13.9 % at 85 % read accuracy). GNNome's copied reads are much cleaner (12.4 %; and 0.36 % vs Raven's 3.55 % at the most accurate setting).
+
+**Mechanism in one line:** a trained model rewards high overlap similarity (which tracks read accuracy, ρ ≈ −0.9), and GNNome's decoding follows the highest-scored edge at each node, so it walks through cleaner reads.
+
+Scripts: `scripts/analysis/why_cleaner.py`, `scripts/analysis/why_cleaner_ablation.py`. Results: `results/13_why_cleaner_reads/`.
 
 ---
 
@@ -304,6 +332,7 @@ Seven conditions × three seeds, each through the identical pipeline. The first 
 10. Polishing: Run 1 polished for the first time (same protocol); per-round QUAST; residual-error composition.
 11. Nine figures with colour palettes validated for colour-vision deficiency.
 12. Statistics: paired 100 kb-window tests with block bootstrap, AUROC bootstrap, binomial and Fisher tests, BH-FDR over 176 tests, paired replicate tests; `verify_all.py` (35/35 PASS).
+13. Mechanism of read selection (§5.1): correlations of overlap similarity with true read error and with model scores, walk-decision analysis, and a feature-ablation re-scoring with the pretrained model.
 
 **C. Problems found and fixed during the work**
 - MAF coordinate shift (above); edge labels and junction analysis re-run after the fix.
